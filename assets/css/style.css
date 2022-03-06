@@ -65,3 +65,28 @@ footer div {
 footer a {
     color: #024e76;
 }
+
+section {
+    padding: 60px;
+}
+
+.hero { /* We created hero class with dot notation "." */
+    background-image: url("../images/hero-bg.jpeg");
+    height: 600px; /* We added more height space */
+    background-size: cover;/*cover
+    Scales the image as large as possible to fill the container, stretching the image if necessary. If the proportions of the image differ from the element, it is cropped either vertically or horizontally so that no empty space remains.*/
+    background-position:center;
+}
+
+.hero-form {
+    padding: 20px;
+    width: 500px;
+    color: #024e76;
+    background-color: #fce138;
+    border: solid 3px #024e76;
+    /* Can be written in three lines:
+    border-style: solid;
+    border-width: 3px;
+    border-color: #024e76;
+    */
+}
