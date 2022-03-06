@@ -41,11 +41,13 @@
             <p>Fill out this form and one of out trainers will schedule a consult</p>
             <form>
                 <label for="name">Enter full name:</label>
-                <input type="text" placeholder="Your Name" name="name" id="name" />
+                <input type="text" placeholder="Your Name" name="name" id="name" class="form-input" />
+                
                 <label for="email">Enter email address:</label>
-                <input type="email" placeholder="Email Address" name="email" id="email" /> <!-- We changed text type to email type of input to make check when users input their information and it should be an email. -->
+                <input type="email" placeholder="Email Address" name="email" id="email" class="form-input" /> <!-- We changed text type to email type of input to make check when users input their information and it should be an email. -->
+
                 <label for="phone">Enter a telephone number:</label>
-                <input type="tel" placeholder="Phone Number" name="phone" id="phone" /> <!-- add type of tel for more comfortable use on mobile version. Input with keypad numbers. -->
+                <input type="tel" placeholder="Phone Number" name="phone" id="phone" class="form-input" /> <!-- add type of tel for more comfortable use on mobile version. Input with keypad numbers. -->
                 <p>
                     Have you worked out with a trainer before?
                     <input type="radio" name="trainer-confirm" id="trainer-yes" />
