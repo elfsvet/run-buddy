@@ -76,6 +76,7 @@ section {
     background-size: cover;/*cover
     Scales the image as large as possible to fill the container, stretching the image if necessary. If the proportions of the image differ from the element, it is cropped either vertically or horizontally so that no empty space remains.*/
     background-position:center;
+    position: relative;
 }
 
 .hero-form {
@@ -89,4 +90,7 @@ section {
     border-width: 3px;
     border-color: #024e76;
     */
+    position: absolute;
+    bottom: 30%; /* in module it was 120px and right was 140px */
+    right: 25px;
 }
