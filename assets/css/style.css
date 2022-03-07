@@ -188,7 +188,7 @@ section {
 }
 
 .trainer {
-    width: 1100px;
+    width: 900px; /* it we would have large bio text we would need to increase this value to make sure the image reaches the bottom padding */
     margin: 0 auto 30px auto;
     background: #024e76;
     color: #fce138;
