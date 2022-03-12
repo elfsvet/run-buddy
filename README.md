@@ -3,12 +3,12 @@
 ## Purpose
 A website that offers fitness training services.
 
-##Built with
+## Built with
 * HTML
 * CSS
 
-##Website
+## Website
 https://elfsvet.github.io/run-buddy/
 
-##Contribution
+## Contribution
 Made with ❤ by Stepan Matysik
