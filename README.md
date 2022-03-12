@@ -1,4 +1,4 @@
-# Run Buddy Inc. Hello
+# Run Buddy Inc. Hello +2
 
 ## Purpose
 A website that offers fitness training services. 
