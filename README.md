@@ -1,4 +1,4 @@
-# Run Buddy Inc. it's a locl repo
+# Run Buddy Inc.
 
 ## Purpose
 A website that offers fitness training services. 
