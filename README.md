@@ -1,4 +1,4 @@
-# Run Buddy, Inc
+# Run Buddy, Inc this on is in git hub
 
 ## Purpose
 A website that offers fitness training services.
