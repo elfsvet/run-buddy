@@ -1,4 +1,4 @@
-# Run Buddy Inc. It's local
+# Run Buddy Inc.
 
 ## Purpose
 A website that offers fitness training services. 
