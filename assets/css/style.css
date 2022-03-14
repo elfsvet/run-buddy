@@ -54,17 +54,20 @@ footer {
     background: #fce138;
     width: 100%;
     padding: 40px 35px;
+    display: flex; /* lets display boxes with moving them around while resizing the window */
+    justify-content: space-between; /* will position two boxes with equal empty space in between them */
+    flex-wrap: wrap; /* will wrap boxes one under another */
 }
 
 footer h2 {
-    display: inline;
+    /* display: inline; 2.2.6 */
     color: #024e76;
     font-size: 30px;
     margin: 0;
 }
 
 footer div {
-    float: right;
+    /* float: right; 2.2.6 */
     line-height: 1.5;
     text-align: right;
 }
@@ -79,16 +82,34 @@ section {
 
 .hero { /* We created hero class with dot notation "." */
     background-image: url("../images/hero-bg.jpeg");
-    height: 600px; /* We added more height space */
+    /* height: 600px; We added more height space (2.2.7 removed it)*/
     background-size: cover;/*cover
     Scales the image as large as possible to fill the container, stretching the image if necessary. If the proportions of the image differ from the element, it is cropped either vertically or horizontally so that no empty space remains.*/
     background-position:center;
-    position: relative;
+    /* position: relative; 2.2.7 removed it */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero-cta {
+    width: 35%;
+    text-align: right;
+    margin: 3.5%;
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+.hero-cta h2 {
+    font-style: italic;
+    font-size: 55px;
+    color: #fce138;
 }
 
 .hero-form {
     padding: 20px;
-    width: 600px;
+    /* width: 600px; */
     color: #024e76;
     background-color: #fce138;
     border: solid 3px #024e76;
@@ -97,9 +118,11 @@ section {
     border-width: 3px;
     border-color: #024e76;
     */
-    position: absolute;
-    bottom: 49px; /* in module it was 120px and right was 140px */
-    right: 60px;
+    /* position: absolute; */
+    /* bottom: 49px; in module it was 120px and right was 140px */
+    /* right: 60px;  all width position bottom and right was removed in lesson 2.2.7 */
+    width: 40%;
+    margin: 3.5%;
 }
 
 .hero-form h3 {
