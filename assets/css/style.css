@@ -10,17 +10,19 @@ body {
     box-sizing: border-box;
 }
 /* apply styles to <header> */
-header {
+header {    /* adding flexbox */
+    display: flex; /* makes the header a row by defaul. Overrides it's children default block-level. */
+    justify-content: space-between; /* distributes all empty space between child elements to keep them evenly spaced apart */
     padding: 20px 35px;
     background-color: #39a6b2;
+    flex-wrap: wrap; /* lets child elements break onto the next line when they don't fit on one line */
 }
 
-header h1 {
+header h1 { /* removed display: inline; */
     font-weight: bold;
     font-size: 36px;
     color: #fce138;
     margin: 0;
-    display: inline;
 }
 
 header a {
@@ -29,7 +31,7 @@ header a {
 }
 
 header nav {
-    float: right;
+    /* float: right; removed for lesson 2.2.4 */
     margin: 7px 0;
 }
 
