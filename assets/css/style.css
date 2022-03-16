@@ -50,7 +50,8 @@ header nav ul {
 }
 
 header nav ul li a {    /* select a elements inside a li element inside an ul element inside a nav element inside a header element */
-    margin: 0 30px;
+    /* margin: 0 30px; replaced with padding: 10px 15px; */
+    padding: 10px 15px; /* creates a tighter navigation menu */
     font-weight: lighter;
     /* font-size: 22px; changed to 1.55vw */
     font-size: 1.55vw;  /* viewport width - vw. viewport is the actual browser window size 1.55% of the window width */
@@ -96,6 +97,7 @@ section {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 .hero-cta {
@@ -104,7 +106,8 @@ section {
     margin: 3.5%;
     color: #fff;
     font-size: 18px;
-    line-height: 1.3;
+    /* line-height: 1.3; changed to 1.2 for easy reading */
+    line-height: 1.2;
 }
 
 .hero-cta h2 {
@@ -170,7 +173,8 @@ section {
     background: #fce138;
 }
 .section-title {
-    font-size: 55px;
+    /* font-size: 55px; changed to 48px - big enouth for all screen sizes, 55 is to big for smaller screens. */
+    font-size: 48px;
     color: #024e76;
     /* margin-bottom: 35px; */
     /* padding: 0 100px 20px 100px; */
@@ -387,4 +391,32 @@ section {
 
 .flex-row {
     display: flex;
+}
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+    /* header h1 a {
+        this will be applied on any screen smaller than 980px
+        color: tomato;
+
+    } */
+
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 786px) {
+    /* header h1 {
+        this will be applied on any screen between 768px and 575px
+        font-size: 80px;
+    } */
+
+}
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+    /* header h1 {
+        this will be applied on any screen smaller than 575px 
+        font-size: 100px;
+    } */
+    
 }
