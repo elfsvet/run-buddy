@@ -168,19 +168,21 @@
             </div>
         </div>
     </section>
-
+    <!-- When related HTML content is laid out in a narrow, vertical column, it's often reffered to as a card -->
     <!-- "meet the trainers" section -->
-    <section id="your-trainers" class="trainers">
+    <section id="your-trainers">
         <div class="flex-row">
             <h2 class="section-title primary-border">
                 Meet The Trainers
             </h2>
         </div>
+        <div class="trainers"> <!-- creating a flex box around <article> elemens -->
         <article class="trainer">
             <img src="./assets/images/trainer-1.jpg" alt="Arron Stephens in his workout clothes, ready to pump iron" />
-            <div class="trainer-bio text-left">
-                <h3>Arron Stephens</h3>
-                <h4>Speed / Strength</h4>
+            <div class="trainer-bio">
+                <!-- removed text-left -->
+                <h3 class="trainer-name">Arron Stephens</h3>
+                <h4 class="trainer-role">Speed / Strength</h4>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, repellat voluptate facere
                     dignissimos adipisci similique voluptatibus est architecto sapiente, praesentium iste ducimus.
@@ -190,23 +192,25 @@
         </article>
         <!-- second trainer bio -->
         <article class="trainer">
-            <div class="trainer-bio text-right">
-                <h3>Joanna Gill</h3>
-                <h4>Endurance</h4>
+            <img src="./assets/images/trainer-2.jpg" alt="Joanna Gill cooling off after a workout" />
+            <div class="trainer-bio">
+                <!-- removed text-right -->
+                <h3 class="trainer-name">Joanna Gill</h3>
+                <h4 class="trainer-role">Endurance</h4>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure vero, magnam repellat tenetur quidem
                     asperiores ea, deleniti est quas quam, similique dignissimos eos consequuntur tempora modi pariatur
                     accusamus iste ab.
                 </p>
             </div>
-            <img src="./assets/images/trainer-2.jpg" alt="Joanna Gill cooling off after a workout" />
         </article>
         <article class="trainer">
             <img src="./assets/images/trainer-3.jpg"
                 alt="Harry Smith wearing a headband and lifting comically small pink weights" />
-            <div class="trainer-bio text-left">
-                <h3>Harry "The Headband" Smith</h3>
-                <h4>Strength</h4>
+            <div class="trainer-bio">
+                <!-- removed text-left -->
+                <h3 class="trainer-name">Harry "The Headband" Smith</h3>
+                <h4 class="trainer-role">Strength</h4>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi ex nam eos dolor mollitia modi.
                     Expedita, voluptas, facere corrupti repellat similique maxime recusandae aperiam tenetur, sed ipsum
@@ -214,6 +218,7 @@
                 </p>
             </div>
         </article>
+        </div>
     </section>
 
     <!-- "reach out" section -->

@@ -263,25 +263,32 @@ section {
 
 .trainers {
     /* text-align: center; */
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .trainer {
-    width: 900px; /* it we would have large bio text we would need to increase this value to make sure the image reaches the bottom padding */
-    margin: 0 auto 30px auto;
+    /* width: 900px; it we would have large bio text we would need to increase this value to make sure the image reaches the bottom padding */
+    margin: 20px; /* changed from 0 auto 30px auto */
     background: #024e76;
     color: #fce138;
-    overflow: auto;
+    flex: 1;
+    /* overflow: auto; */
 }
 
 .trainer img {
-    width: 35%;
-    float: left;
+    width: 100%; /* changed from 35% */
+    /* float: left; */
 }
 
 .trainer-bio {
-    padding: 35px;
-    float: left;
-    width: 65%;
+    padding: 25px; /* changed from 35px */
+    /* float: left; */
+    /* width: 65%; */
+    line-height: 1.3; /* moved from .trainer-bio p */
 }
 
 .text-left {
@@ -293,19 +300,18 @@ section {
 }
 
 .trainer-bio h3 {
-    font-size: 32px;
-    margin-bottom: 8px;
+    font-size: 28px; /* changed from 32 */
+    /* margin-bottom: 8px; */
 }
 
 .trainer-bio h4 {
     font-weight: lighter;
-    font-size: 17px;
-    margin-bottom: 25px;
+    font-size: 22px; /* changed from 17px */
+    margin-bottom: 15px; /* changed from 25px */
 }
 
 .trainer-bio p {
     font-size: 17px;
-    line-height: 1.3;
 }
 
 .contact {
