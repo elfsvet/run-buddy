@@ -22,6 +22,14 @@ header {    /* adding flexbox */
     padding: 20px 35px;
     background-color: #39a6b2;
     flex-wrap: wrap; /* lets child elements break onto the next line when they don't fit on one line */
+    /* safary will have the sticky head too!!! */
+    position: -webkit-sticky; /* goes before finilaized version */
+    position: sticky;
+    top: 0;
+    background-image: url("../images/hero-bg.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 80%;
 }
 
 header h1 { /* removed display: inline; */
@@ -29,6 +37,8 @@ header h1 { /* removed display: inline; */
     font-size: 36px;
     color: #fce138;
     margin: 0;
+    /* add text shadows without offsets and with 10px blur and 50% opacity */
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 header a {
@@ -55,6 +65,7 @@ header nav ul li a {    /* select a elements inside a li element inside an ul el
     font-weight: lighter;
     /* font-size: 22px; changed to 1.55vw */
     font-size: 1.55vw;  /* viewport width - vw. viewport is the actual browser window size 1.55% of the window width */
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 footer {
@@ -92,13 +103,13 @@ section {
     /* height: 600px; We added more height space (2.2.7 removed it)*/
     background-size: cover;/*cover
     Scales the image as large as possible to fill the container, stretching the image if necessary. If the proportions of the image differ from the element, it is cropped either vertically or horizontally so that no empty space remains.*/
-    background-position:center;
+    background-position: 80%;
     /* position: relative; 2.2.7 removed it */
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     align-items: flex-start;
-}
+    background-attachment: fixed;}
 
 .hero-cta {
     width: 35%;
@@ -114,13 +125,15 @@ section {
     font-style: italic;
     font-size: 55px;
     color: #fce138;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .hero-form {
     padding: 20px;
     /* width: 600px; */
     color: #024e76;
-    background-color: #fce138;
+    /* background-color: #fce138; to make it use rgb with transperancy */
+    background-color: rgba(252, 225, 56, 0.8);
     border: solid 3px #024e76;
     /* Can be written in three lines:
     border-style: solid;
@@ -132,6 +145,9 @@ section {
     /* right: 60px;  all width position bottom and right was removed in lesson 2.2.7 */
     width: 40%;
     margin: 3.5%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    /* to add rounder corners we'll use border-radius:; */
+    border-radius: 15px;
 }
 
 .hero-form h3 {
@@ -150,6 +166,13 @@ section {
     width: 100%;
     margin-bottom: 15px;
     border: 1px solid #024e76;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+/* this makes form input box opique then it pressed to input info in it. */
+.form-input:focus {
+    background-color: rgba(255, 255, 255, 1);
+    outline: none;
 }
 
 .hero-form label {
@@ -162,6 +185,11 @@ section {
     border: none;
     padding: 10px 20px;
     font-size: 16px;
+    border-radius: 10px;
+}
+
+.hero-form button:hover {
+    background-color: #39a6b2;
 }
 
 /* .intro {
@@ -216,11 +244,32 @@ section {
     margin: 50px auto;
     padding-bottom: 50px;
     width: 80%;
-    border-bottom: 1px solid #39a6b2;
+    /* border-bottom: 1px solid #39a6b2; deleted in 2.4.6 lesson */
     display: flex;
     flex-wrap: wrap;
     align-items: center; /* helps keep right box align with the left box ot right's center. */
     justify-content: space-between;
+}
+/* this will applied only to the last step element */
+/* .step:last-child {
+    border-bottom: 1px solid #39a6b2;
+} */
+/* .step:nth-child(even) {
+    border-bottom: 1px solid #39a6b2;
+} */
+
+/* same as below
+.step {
+ re-add alongside existing declarations 
+    border-bottom: 1px solid #39a6b2;
+  }
+  
+  .step:last-child {
+    border-bottom: none;
+  } */
+
+.step:not(:last-child) {
+    border-bottom: 1px solid #39a6b2;
 }
 
 .step h3 { /* renamed from steps h3 to step h3 */
@@ -373,6 +422,13 @@ section {
     width: 100%;
     margin-bottom: 15px;
     margin-top: 5px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    background-color: rgba(255, 255, 255, 1);
+    outline: none;
 }
 
 .contact-form button {
@@ -383,6 +439,12 @@ section {
     text-align: center;
     padding: 15px 0;
     font-size: 16px;
+    border-radius: 10px;
+}
+
+.contact-form button:hover {
+    color: #fce138;
+    background: #39a6b2;
 }
 
 .contact-info a {
@@ -404,6 +466,7 @@ section {
     header {
         padding-bottom: 0;
         justify-content: center;
+        position: relative;
     }
 
     header h1 {
@@ -419,6 +482,13 @@ section {
 
     header nav ul li a {
         font-size: 20px;
+    }
+
+    header nav ul li a:hover {
+        background: #fce138;
+        color: #024e76;
+        border-radius: 15px;
+        text-shadow: none;
     }
 
     footer h2, footer div {
