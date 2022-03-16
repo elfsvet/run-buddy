@@ -1,3 +1,9 @@
+/* the browser reads CSS selectors from right to left (or innermost element to outermost element). A selector of header nav ul li a essentially says, "Find every <a> element that's inside an <li> element, but the <li> element has to be in a <ul> element, and the <ul> element has to be in a <nav> element,"and so on. The browser has to do a few pass-throughs, working its way up the HTML structure to apply the CSS styles correctly. 
+
+A whole page of selectors like this might slow down performance as the page grows. You can combat that by providing a class to the elements you want to style, and selecting just that class. But adding a class attribute to every element could prove tedious, leading to extraneous HTML.
+
+In these common situations, you'll have to choose: make the code slightly more performant, or make it slightly easier to read. The answer usually lies somewhere in the middle, with something like .nav-class a—which is easy to interpret but also specific enough for the browser to read efficiently.*/
+
 body {
     /* more on this crazy alphanumerical value in a minute! */
     color: #39a6b2;
@@ -194,29 +200,66 @@ section {
     text-align: center;
 }
 
-.steps div {
+/* .steps div {
     margin-bottom: 80px;
-}
+} */
 
-.steps img {
+/* .steps img {
     width: 15%;
     margin: 10px 0;
+} */
+.step {
+    margin: 50px auto;
+    padding-bottom: 50px;
+    width: 80%;
+    border-bottom: 1px solid #39a6b2;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; /* helps keep right box align with the left box ot right's center. */
+    justify-content: space-between;
 }
 
-.steps h3 {
+.step h3 { /* renamed from steps h3 to step h3 */
     color: #024e76;
     font-size: 46px;
-    margin-top: 10px;
+    flex: 1 30%; /* flex-grow and flex-basis - h3 will be at least 70% wide but will receive any extra space in the container at a 2-to-1 ratio. */
+    /* margin-top: 10px; */
 }
 
-.steps p {
+.step-info {
+    flex: 2 70%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.step-text p {
     color: #39a6b2;
-    font-size: 23px;
+    font-size: 18px; /* instead of 23px */
 }
 
-.steps span {
-    font-size: 38px;
+.step-text h4 {
+    font-size: 26px;
+    line-height: 1.5;
+    color: #024e76;
 }
+
+.step-img {
+    flex: 1 12%;
+    margin-right: 20px;
+}
+
+.step-text {
+    flex: 12;
+}
+
+.step-img img {
+    max-width: 100%;
+}
+
+/* .steps span {
+    font-size: 38px;
+} */
 
 .trainers {
     /* text-align: center; */
