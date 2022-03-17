@@ -10,17 +10,18 @@ In these common situations, you'll have to choose: make the code slightly more p
     --tertiary-color: #39a6b2;
 }
 
+* { /* an * selector CSS */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     /* more on this crazy alphanumerical value in a minute! */
     color: var(--tertiary-color);
     font-family: Helvetica, Arial, sans-serif;
 }
 
-* { /* an * selector CSS */
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 /* apply styles to <header> */
 header {    /* adding flexbox */
     z-index: 9999;
@@ -73,6 +74,13 @@ header nav ul li a {    /* select a elements inside a li element inside an ul el
     /* font-size: 22px; changed to 1.55vw */
     font-size: 1.55vw;  /* viewport width - vw. viewport is the actual browser window size 1.55% of the window width */
     text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+header nav ul li a:hover {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 15px;
+    text-shadow: none;
 }
 
 footer {
@@ -549,13 +557,6 @@ section {
 
     header nav ul li a {
         font-size: 20px;
-    }
-
-    header nav ul li a:hover {
-        background: var(--primary-color);
-        color: var(--secondary-color);
-        border-radius: 15px;
-        text-shadow: none;
     }
 
     footer h2, footer div {
